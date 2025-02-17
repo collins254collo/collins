@@ -23,7 +23,7 @@ const Home = () => {
         >
           {/* Subheading */}
           <p className="text-lg font-semibold text-gray-600 dark:text-gray-300 mb-2">
-            Software Engineer | Full-Stack Developer
+            Web Developer | Full-Stack Developer
           </p>
 
           <h1 className="text-3xl md:text-6xl font-bold my-6">
@@ -85,7 +85,7 @@ const Home = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/yourlinkedin"
+              href="https://linkedin.com/in/collins-njogu-4aa75a351"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-indigo-500 transition duration-300"
