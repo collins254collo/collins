@@ -58,14 +58,7 @@ const Navbar = () => {
               Projects
             </a>
           </li>
-          <li className="py-2 md:py-0 text-center md:text-left">
-            <a
-              href="#about"
-              className="hover:text-indigo-400 dark:text-gray-100 dark:hover:text-indigo-300 transition block md:inline"
-            >
-              About
-            </a>
-          </li>
+
           <li className="py-2 md:py-0 text-center md:text-left">
             <a
               href="#contact"
