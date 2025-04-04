@@ -62,12 +62,39 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setPopupMessage("Message Sent Successfully!");
-      setPopup(true);
-      setFormData({ name: "", email: "", message: "" });
-    }, 2000);
+
+    const sendEmail = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/send_email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Network response was not ok: ${errorText}`);
+        }
+
+        const data = await response.json();
+        console.log("Email sent successfully:", data);
+
+        setTimeout(() => {
+          setLoading(false);
+          setPopupMessage("Message Sent Successfully!");
+          setPopup(true);
+          setFormData({ name: "", email: "", message: "" });
+        }, 2000);
+      } catch (error) {
+        console.error("Error sending email:", error);
+        setPopup(true);
+        setPopupMessage("Failed to send message. Please try again.");
+        setLoading(false);
+      }
+    };
+
+    sendEmail();
   };
 
   return (
