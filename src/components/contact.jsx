@@ -65,13 +65,16 @@ const Contact = () => {
 
     const sendEmail = async () => {
       try {
-        const response = await fetch("https://portfolio-t5sr.onrender.com", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+        const response = await fetch(
+          "https://portfolio-t5sr.onrender.com/send_email",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
 
         if (!response.ok) {
           throw new Error(`Network response was not ok: ${errorText}`);
