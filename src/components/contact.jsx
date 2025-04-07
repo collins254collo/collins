@@ -65,7 +65,7 @@ const Contact = () => {
 
     const sendEmail = async () => {
       try {
-        const response = await fetch("http://localhost:3000/send_email", {
+        const response = await fetch("https://portfolio-t5sr.onrender.com", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
