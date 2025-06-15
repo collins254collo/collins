@@ -12,7 +12,7 @@ const testimonials = [
   {
     name: "Kevin Comba",
     company: "Tech2Give INC",
-    image: "../assets/testimonial.webp",
+    image: `../assets/testimonial.webp`,
     linkedin: "https://linkedin.com/in/kevincomba",
     twitter: "https://twitter.com/kevincomba",
   },
@@ -20,7 +20,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="py-16 bg-gray-900 ">
+    <div className="py-16  ">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold text-blue-600 dark:text-blue-400">
           References

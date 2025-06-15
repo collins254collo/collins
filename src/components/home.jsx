@@ -22,13 +22,13 @@ const Home = () => {
           className="md:w-1/2 max-w-3xl"
         >
           {/* Subheading */}
-          <p className="text-lg font-semibold text-gray-600 dark:text-gray-300 mb-2">
+          <p className="text-lg font-semibold text-gray-600 dark:text-gray-300 mb-2 mt-4">
             Web Developer | Full-Stack Developer
           </p>
 
-          <h1 className="text-3xl md:text-6xl font-bold my-6">
+          <h1 className="text-3xl md:text-6xl font-bold my-6 sm:text-2xl">
             Hi, I'm{" "}
-            <span className="text-indigo-600 dark:text-indigo-400">
+            <span className="text-indigo-600 dark:text-indigo-400 ">
               Collins Njogu
             </span>
           </h1>
@@ -49,7 +49,7 @@ const Home = () => {
             </span>
           </p>
 
-          <p className="text-xl font-medium mb-8 text-gray-800 dark:text-gray-400 leading-relaxed">
+          <p className="lg:text-xl font-medium mb-8 text-gray-800 dark:text-gray-400 leading-relaxed sm:text-2xl">
             I'm a passionate Full Stack Developer who loves transforming ideas
             into sleek, high-performance applications. I specialize in building
             responsive and scalable web solutions using modern technologies like
@@ -60,17 +60,17 @@ const Home = () => {
           <div className="flex gap-4 justify-center mb-6">
             <button
               onClick={() => navigate("/projects")}
-              className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-400 dark:hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-md transition duration-300 cursor-pointer"
+              className="px-6 py-3  sm:text-2xl bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-400 dark:hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-md transition duration-300 cursor-pointer"
             >
-              View My Work
+              Projects
             </button>
             <a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 border border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-400 dark:hover:text-gray-900 font-semibold rounded-lg shadow-md transition duration-300"
+              className="px-6 py-3    sm:text-2xl border border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-400 dark:hover:text-gray-900 font-semibold lg:rounded-lg shadow-md transition duration-300"
             >
-              View Resume
+               Resume
             </a>
           </div>
 
@@ -111,7 +111,7 @@ const Home = () => {
           className="mt-10 md:mt-0 md:w-1/2 flex justify-center"
         >
           <img
-            className="max-w-[280px] md:max-w-[300px] lg:max-w-[400px] rounded-xl shadow-lg border-4 border-indigo-200 dark:border-indigo-400"
+            className="max-w-[280px] md:max-w-[300px] lg:max-w-[350px] rounded-xl shadow-lg border-4 border-indigo-200 dark:border-indigo-400"
             src={portfolio}
             alt="Collins Njogu"
           />

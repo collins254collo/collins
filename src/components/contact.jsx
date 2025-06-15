@@ -101,7 +101,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative py-16 bg-gray-900 text-white">
+    <section id="contact" className="relative py-16 text-white">
       {/* Particle Background */}
       <Particles
         id="tsparticles"
@@ -130,15 +130,7 @@ const Contact = () => {
           Let's Connect
         </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-center text-lg mb-10 text-gray-300"
-        >
-          Have a question or want to collaborate? Drop me a message below or
-          reach out on my socials.
-        </motion.p>
+        
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-12">
           {/* Contact Form */}
@@ -147,13 +139,13 @@ const Contact = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
             onSubmit={handleSubmit}
-            className="w-full md:w-1/2 bg-gray-800 bg-opacity-80 backdrop-blur-lg rounded-xl shadow-xl p-8"
+            className="w-full md:w-1/2 bg-gray-200 bg-opacity-80 backdrop-blur-lg rounded-xl shadow-xl p-8"
           >
             {["name", "email", "message"].map((field) => (
               <div className="mb-6" key={field}>
                 <label
                   htmlFor={field}
-                  className="block text-sm font-medium mb-2 text-gray-400"
+                  className="block text-sm font-medium mb-2 text-gray-800"
                 >
                   {field.charAt(0).toUpperCase() + field.slice(1)}
                 </label>

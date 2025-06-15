@@ -9,12 +9,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="text-gray-900 shadow-md top-0 left-0 w-full z-50  bg-gray-900 ">
+    <nav className="text-gray-100 shadow-md top-0 left-0 w-full z-50  bg-gray-900 ">
       <div className="container mx-auto px-6 py-4 flex justify-around items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-indigo-500 cursor-pointer">
           <a
-            href="#home"
+            href="/"
             className="hover:text-indigo-400 dark:hover:text-indigo-300 transition"
           >
             Collins Njogu

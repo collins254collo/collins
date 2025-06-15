@@ -91,7 +91,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="py-16 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
+      className="py-16  dark:bg-gray-300 text-gray-900 dark:text-white transition-colors duration-300"
     >
       <div className="container mx-auto px-6 flex flex-col justify-center items-center">
         <h2 className="text-4xl font-bold text-center text-indigo-500 mb-12">
