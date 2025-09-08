@@ -1,12 +1,22 @@
 @import "tailwindcss";
 
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f9fafb;
+  color: #111827;
   /* Light mode */
 }
 
 .dark body {
   background-color: #1a202c;
+  color: #f9fafb;
   /* Dark mode */
 }
 

@@ -6,6 +6,16 @@
     <link rel="icon" type="image/svg+xml" href="/portfolio.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Collo</title>
+    <!-- Prevent flash of incorrect theme -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (theme === 'dark' || (!theme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <!-- Root div where React mounts the app -->

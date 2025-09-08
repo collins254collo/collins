@@ -6,119 +6,227 @@ import Skills from "./skills";
 import Contact from "./contact";
 import Testimonials from "./testimonial";
 import Typewriter from "typewriter-effect";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaCode, FaRocket, FaHeart } from "react-icons/fa";
+import { SiReact, SiJavascript, SiNodedotjs, SiPostgresql } from "react-icons/si";
+import Blogs from "./blog";
 
 const Home = () => {
   const navigate = useNavigate(); // Use React Router navigation
 
   return (
     <div>
-      <section className="min-h-screen flex flex-col-reverse md:flex-row justify-center items-center text-center px-6 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <section className="min-h-screen flex flex-col-reverse md:flex-row justify-center items-center text-center px-6 bg-gradient-to-br from-gray-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 relative overflow-hidden">
+        {/* Background Decoration */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-indigo-200 dark:bg-indigo-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 dark:bg-purple-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 animate-pulse"></div>
+        </div>
+
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}
-          className="md:w-1/2 max-w-3xl"
+          className="md:w-1/2 max-w-3xl relative z-10"
         >
-          {/* Subheading */}
-          <p className="text-lg font-semibold text-gray-600 dark:text-gray-300 mb-2 mt-4">
-            Web Developer | Full-Stack Developer
-          </p>
+          {/* Greeting Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium mb-6 border border-indigo-200 dark:border-indigo-700"
+          >
+            <FaCode className="w-4 h-4" />
+            <span>Available for new opportunities</span>
+            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          </motion.div>
 
-          <h1 className="text-3xl md:text-6xl font-bold my-6 sm:text-2xl">
+          {/* Main Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-bold mb-4 leading-tight"
+          >
             Hi, I'm{" "}
-            <span className="text-indigo-600 dark:text-indigo-400 ">
+            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
               Collins Njogu
             </span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-lg md:text-xl mb-6 text-gray-900 dark:text-gray-300 font-medium leading-relaxed">
-            <span className="text-indigo-600 dark:text-indigo-400 text-3xl">
-              <Typewriter
-                options={{
-                  strings: [
-                    "Full Stack Developer",
-                    "React & Tailwind Enthusiast",
-                    "Backend Engineer",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </span>
-          </p>
+          {/* Dynamic Typewriter */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-3xl font-bold mb-8 text-gray-700 dark:text-gray-300"
+          >
+            <Typewriter
+              options={{
+                strings: [
+                  "Full Stack Developer",
+                  "React & Next.js Expert",
+                  "AI Integration Specialist",
+                  "Cloud Solutions Architect",
+                  "Open Source Contributor",
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 50,
+                deleteSpeed: 30,
+              }}
+            />
+          </motion.div>
 
-          <p className="lg:text-xl font-medium mb-8 text-gray-800 dark:text-gray-400 leading-relaxed sm:text-2xl">
-            I'm a passionate Full Stack Developer who loves transforming ideas
-            into sleek, high-performance applications. I specialize in building
-            responsive and scalable web solutions using modern technologies like
-            React, Tailwind, Node.js, and PostgreSQL.
-          </p>
+          {/* Enhanced Description */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="space-y-4 mb-8"
+          >
+            <p className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+              I craft <span className="font-semibold text-indigo-600 dark:text-indigo-400">cutting-edge digital experiences</span> that blend innovation with functionality. 
+              Specializing in modern web technologies, I build scalable applications that power the future of business.
+            </p>
+            
+            <p className="text-sm sm:text-base md:text-lg lg:text-base xl:text-base text-gray-500 dark:text-gray-500 leading-relaxed">
+              From <span className="font-medium text-purple-600 dark:text-purple-400">AI-powered applications</span> to 
+              <span className="font-medium text-blue-600 dark:text-blue-400"> cloud-native solutions</span>, 
+              I transform complex ideas into elegant, user-centric products that drive real-world impact.
+            </p>
+          </motion.div>
+
+          {/* Tech Stack Icons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+            className="flex justify-center items-center gap-4 mb-8"
+          >
+            <span className="text-sm font-medium text-gray-500 dark:text-gray-400">Tech Stack:</span>
+            <div className="flex gap-3">
+              <SiReact className="w-6 h-6 text-blue-500 hover:scale-110 transition-transform" title="React" />
+              <SiJavascript className="w-6 h-6 text-yellow-500 hover:scale-110 transition-transform" title="JavaScript" />
+              <SiNodedotjs className="w-6 h-6 text-green-500 hover:scale-110 transition-transform" title="Node.js" />
+              <SiPostgresql className="w-6 h-6 text-blue-600 hover:scale-110 transition-transform" title="PostgreSQL" />
+            </div>
+          </motion.div>
 
           {/* Call to Actions */}
-          <div className="flex gap-4 justify-center mb-6">
-            <button
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => navigate("/projects")}
-              className="px-6 py-3  sm:text-2xl bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-400 dark:hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-md transition duration-300 cursor-pointer"
+              className="group px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base cursor-pointer"
             >
-              Projects
-            </button>
-            <a
-              href="/resume.pdf"
-              target="_blank"
+              <FaRocket className="w-4 h-4 md:w-5 md:h-5 group-hover:animate-bounce " />
+              View My Work
+            </motion.button>
+            
+          <motion.a
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              href="resume.pdf"
+              download="resume.pdf"
               rel="noopener noreferrer"
-              className="px-6 py-3    sm:text-2xl border border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-400 dark:hover:text-gray-900 font-semibold lg:rounded-lg shadow-md transition duration-300"
+              className="group px-6 py-3 md:px-8 md:py-4 border-2 border-indigo-600 dark:border-indigo-400 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-400 dark:hover:text-gray-900 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base"
             >
-               Resume
-            </a>
-          </div>
+            <FaCode className="w-4 h-4 md:w-5 md:h-5" />
+            Download Resume
+          </motion.a>
 
-          {/* Social Links */}
-          <div className="flex justify-center gap-6 text-gray-700 dark:text-gray-300 text-2xl">
-            <a
-              href="https://github.com/collins254collo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-indigo-500 transition duration-300"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://linkedin.com/in/collins-njogu-4aa75a351"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-indigo-500 transition duration-300"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://twitter.com/yourtwitter"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-indigo-500 transition duration-300"
-            >
-              <FaTwitter />
-            </a>
-          </div>
+          </motion.div>
+
+          {/* Enhanced Social Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+            className="space-y-4"
+          >
+            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Let's connect and build something amazing together</p>
+            <div className="flex justify-center gap-6">
+              <motion.a
+                whileHover={{ scale: 1.2, y: -3 }}
+                whileTap={{ scale: 0.9 }}
+                href="https://github.com/collins254collo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-all duration-300"
+                aria-label="GitHub Profile"
+              >
+                <FaGithub className="w-6 h-6 text-gray-600 dark:text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" />
+              </motion.a>
+              
+              <motion.a
+                whileHover={{ scale: 1.2, y: -3 }}
+                whileTap={{ scale: 0.9 }}
+                href="https://linkedin.com/in/collins-njogu-4aa75a351"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 transition-all duration-300"
+                aria-label="LinkedIn Profile"
+              >
+                <FaLinkedin className="w-6 h-6 text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
+              </motion.a>
+              
+              <motion.a
+                whileHover={{ scale: 1.2, y: -3 }}
+                whileTap={{ scale: 0.9 }}
+                href="https://twitter.com/yourtwitter"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-sky-100 dark:hover:bg-sky-900 transition-all duration-300"
+                aria-label="Twitter Profile"
+              >
+                <FaTwitter className="w-6 h-6 text-gray-600 dark:text-gray-400 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors" />
+              </motion.a>
+            </div>
+          </motion.div>
         </motion.div>
 
-        {/* Right Content (Image) */}
+        {/* Right Content (Enhanced Image) */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 2 }}
-          className="mt-10 md:mt-0 md:w-1/2 flex justify-center"
+          initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 1.5, delay: 0.5 }}
+          className="mt-8 md:mt-0 md:w-1/2 flex justify-center relative z-10 px-4"
         >
-          <img
-            className="max-w-[280px] md:max-w-[300px] lg:max-w-[350px] rounded-xl shadow-lg border-4 border-indigo-200 dark:border-indigo-400"
-            src={portfolio}
-            alt="Collins Njogu"
-          />
+          <div className="relative w-full max-w-sm md:max-w-md">
+            {/* Decorative Elements - Hidden on mobile for cleaner look */}
+            <div className="hidden md:block absolute -top-4 -right-4 w-8 h-8 bg-indigo-500 rounded-full animate-pulse"></div>
+            <div className="hidden md:block absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
+            <div className="hidden md:block absolute top-1/2 -right-8 w-4 h-4 bg-pink-500 rounded-full animate-pulse delay-500"></div>
+            
+            {/* Main Image Container */}
+            <div className="relative p-2 bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 dark:from-indigo-800 dark:via-purple-800 dark:to-pink-800 rounded-2xl shadow-2xl">
+              <img
+                className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded-xl shadow-lg"
+                src={portfolio}
+                alt="Collins Njogu - Full Stack Developer"
+              />
+              
+              {/* Overlay Badge */}
+              <div className="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-2 md:p-3 shadow-lg">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300">Available for work</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </section>
 
       <Skills />
+      <Blogs/>
       <Contact />
       <Testimonials />
     </div>

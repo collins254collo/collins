@@ -4,6 +4,7 @@ import Home from "./components/home";
 import Loader from "./components/loader";
 import Navbar from "./components/navbar";
 import Project from "./components/projects";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -22,14 +23,16 @@ function App() {
   return loading ? (
     <Loader />
   ) : (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Project />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Project />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 

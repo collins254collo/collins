@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="text-gray-100 py-8 bg-gray-900">
+    <footer className="text-gray-100 py-8 bg-gray-900 dark:bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left Section */}
