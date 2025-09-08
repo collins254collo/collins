@@ -11,7 +11,7 @@ import { SiReact, SiJavascript, SiNodedotjs, SiPostgresql } from "react-icons/si
 import Blogs from "./blog";
 
 const Home = () => {
-  const navigate = useNavigate(); // Use React Router navigation
+  const navigate = useNavigate(); 
 
   return (
     <div>
@@ -208,7 +208,7 @@ const Home = () => {
             {/* Main Image Container */}
             <div className="relative p-2 bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 dark:from-indigo-800 dark:via-purple-800 dark:to-pink-800 rounded-2xl shadow-2xl">
               <img
-                className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded-xl shadow-lg"
+                className="w-full h-64 sm:h-72  md:h-80 lg:h-96 object-cover rounded-xl shadow-lg sm:mt-16"
                 src={portfolio}
                 alt="Collins Njogu - Full Stack Developer"
               />
