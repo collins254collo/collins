@@ -96,9 +96,13 @@ const Projects = () => {
         className="text-center mb-16"
       >
       
-        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-      A showcase of carefully selected projects that demonstrate my expertise in developing scalable, efficient, and user-centric applications.
-    </p>
+      <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto font-medium sm:px-6 px-4 leading-relaxed">
+        Showcasing{" "}
+        <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent font-extrabold">
+        Projects
+        </span>{" "}
+        that demonstrate my expertise and craftsmanship.
+      </p>
 
 
       </motion.div>
