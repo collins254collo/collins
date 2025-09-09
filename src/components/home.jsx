@@ -193,36 +193,37 @@ const Home = () => {
         </motion.div>
 
         {/* Right Content (Enhanced Image) */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 1.5, delay: 0.5 }}
-          className="mt-8 md:mt-0 md:w-1/2 flex justify-center relative z-10 px-4"
-        >
-          <div className="relative w-full max-w-sm md:max-w-md">
-            {/* Decorative Elements - Hidden on mobile for cleaner look */}
-            <div className="hidden md:block absolute -top-4 -right-4 w-8 h-8 bg-indigo-500 rounded-full animate-pulse"></div>
-            <div className="hidden md:block absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
-            <div className="hidden md:block absolute top-1/2 -right-8 w-4 h-4 bg-pink-500 rounded-full animate-pulse delay-500"></div>
-            
-            {/* Main Image Container */}
-            <div className="relative p-2 bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 dark:from-indigo-800 dark:via-purple-800 dark:to-pink-800 rounded-2xl shadow-2xl">
-              <img
-                className="w-full h-64 sm:h-72  md:h-80 lg:h-96 object-cover rounded-xl shadow-lg sm:mt-16"
-                src={portfolio}
-                alt="Collins Njogu - Full Stack Developer"
-              />
-              
-              {/* Overlay Badge */}
-              <div className="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-2 md:p-3 shadow-lg">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300">Available for work</span>
-                </div>
-              </div>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+      animate={{ opacity: 1, scale: 1, rotate: 0 }}
+      transition={{ duration: 1.5, delay: 0.5 }}
+      className="mt-24 sm:mt-14 md:mt-0 md:w-1/2 flex justify-center relative z-10 px-4"
+    >
+      <div className="relative w-full max-w-sm md:max-w-md">
+        {/* Decorative Elements - Hidden on mobile for cleaner look */}
+        <div className="hidden md:block absolute -top-4 -right-4 w-8 h-8 bg-indigo-500 rounded-full animate-pulse"></div>
+        <div className="hidden md:block absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
+        <div className="hidden md:block absolute top-1/2 -right-8 w-4 h-4 bg-pink-500 rounded-full animate-pulse delay-500"></div>
+        
+        {/* Main Image Container */}
+        <div className="relative p-2 bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 dark:from-indigo-800 dark:via-purple-800 dark:to-pink-800 rounded-2xl shadow-2xl">
+          <img
+            className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded-xl shadow-lg"
+            src={portfolio}
+            alt="Collins Njogu - Full Stack Developer"
+          />
+          
+          {/* Overlay Badge */}
+          <div className="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-2 md:p-3 shadow-lg">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300">Available for work</span>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </div>
+    </motion.div>
+
       </section>
 
       <Skills />

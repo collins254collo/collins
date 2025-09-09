@@ -5,7 +5,7 @@ import { FaLinkedin, FaTwitter } from "react-icons/fa";
 const testimonials = [
   {
     name: "Emmanuel Ambundo",
-    company: "Microsoft INC",
+    company: "Colman Tech Savvy",
     image: "https://via.placeholder.com/150",
     linkedin: "https://linkedin.com/in/emmanuelambundo",
     twitter: "https://twitter.com/emmanuelambundo",
