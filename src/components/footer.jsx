@@ -18,22 +18,22 @@ const Footer = () => {
           {/* Middle Section (Links) */}
           <div className="flex flex-col md:flex-row gap-6 text-center">
             <a
-              href="#home"
+              href="/"
               className="hover:text-indigo-700 dark:hover:text-indigo-400 transition"
             >
               Home
             </a>
             <a
-              href="#projects"
+              href="/projects"
               className="hover:text-indigo-700 dark:hover:text-indigo-400 transition"
             >
               Projects
             </a>
             <a
-              href="#about"
+              href="#skills"
               className="hover:text-indigo-700 dark:hover:text-indigo-400 transition"
             >
-              About
+              Skills
             </a>
             <a
               href="#contact"

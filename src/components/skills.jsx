@@ -167,15 +167,18 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <section
-      id="skills"
-      className="py-20 bg-gradient-to-br from-gray-50 via-white to-indigo-50 dark:from-gray-800 dark:via-gray-900 dark:to-indigo-900 text-gray-900 dark:text-white transition-colors duration-300 relative overflow-hidden"
-    >
-      {/* Background Decoration */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 w-64 h-64 bg-indigo-200 dark:bg-indigo-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-60 animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-64 h-64 bg-purple-200 dark:bg-purple-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-60 animate-pulse delay-1000"></div>
-      </div>
+        <section
+        id="skills"
+        className="py-20 bg-gradient-to-br from-gray-50 via-white to-indigo-50
+        dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900 
+        text-gray-900 dark:text-white transition-colors duration-300 relative overflow-hidden"
+      >
+
+          {/* Background Decoration */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-indigo-200 dark:bg-indigo-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 dark:bg-purple-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 animate-pulse"></div>
+        </div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
@@ -267,29 +270,7 @@ const Skills = () => {
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
-              Ready to Build Something Amazing?
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-              Let's discuss how these technologies can bring your next project to life with modern, scalable solutions.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-            >
-              Let's Connect
-            </motion.button>
-          </div>
-        </motion.div>
+       
       </div>
     </section>
   );

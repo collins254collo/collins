@@ -10,79 +10,80 @@ import {
   SiOpenai,
 } from "react-icons/si";
 
-const projectsData = [
-  {
-    id: 1,
-    title: "Furniture E-Commerce Shop",
-    intro:
-      "A full-stack e-commerce website for browsing, purchasing, and managing furniture orders. Built with scalability and user experience in mind.",
-    image: "/furniture.png",
-    technologies: [
-      { name: "React", icon: SiReact },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Node.js", icon: SiNodedotjs },
-      { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "Stripe", icon: SiStripe },
-    ],
-    contributions: [
-      "Developed backend services in Node.js + PostgreSQL for products, users, and orders.",
-      "Built a responsive frontend using React and Tailwind CSS.",
-      "Integrated Stripe for secure payment processing.",
-      "Deployed frontend (Vercel) and backend (Render) for global access.",
-    ],
-    impact:
-      "Delivered a real-world shopping experience with authentication, secure payments, and fast UI — simulating a production-ready e-commerce system.",
-    github: "https://github.com/CollinsNjogu/furniture-shop",
-    live: "bobby-furniture-frontend.vercel.app",
-  },
-  {
-    id: 2,
-    title: "Ride-Hailing Platform",
-    intro:
-      "A real-time Uber-like platform that connects drivers and riders with live location tracking and digital payments.",
-    image: "/furniture.png",
-    technologies: [
-      { name: "React", icon: SiReact },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Node.js", icon: SiNodedotjs },
-      { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "Mapbox", icon: SiMapbox },
-    ],
-    contributions: [
-      "Designed the driver and rider UI in React with Tailwind.",
-      "Built RESTful APIs for ride requests, fare calculation, and driver matching.",
-      "Integrated Mapbox for real-time tracking and route visualization.",
-      "Added authentication system with role-based login (driver/rider).",
-    ],
-    impact:
-      "Created a scalable foundation for ride-hailing systems with features like real-time maps, role-based access, and payment integration.",
-    github: "https://github.com/CollinsNjogu/ride-hailing",
-    live: "https://ride-hailing.vercel.app",
-  },
-  {
-    id: 3,
-    title: "AI-Powered Chatbot",
-    intro:
-      "As a co-founder of Colman, I developed an AI-powered chatbot integrated with OpenAI’s API to deliver real-time, automated customer support on our platform.",
-    image: "/colman.png",
-    technologies: [
-      { name: "React", icon: SiReact },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Node.js", icon: SiNodedotjs },
-      { name: "OpenAI", icon: SiOpenai },
-    ],
-    contributions: [
-      "Integrated OpenAI API for intelligent, context-aware responses.",
-      "Designed and built the chatbot UI with React + Tailwind for seamless interactions.",
-      "Implemented a Node.js backend for session management and API integration.",
-      "Deployed the chatbot on Colman’s platform to support real-time customer engagement.",
-    ],
-    impact:
-      "Improved customer experience by automating inquiries, reducing manual workload, and ensuring 24/7 availability for users.",
-    github: "https://github.com/CollinsNjogu/ai-chatbot",
-    live: "https://colman-chatbot.vercel.app",
+  const projectsData = [
+    {
+      id: 1,
+      title: "Furniture E-Commerce Shop",
+      intro:
+        "A full-stack e-commerce website for browsing, purchasing, and managing furniture orders. Built with scalability and user experience in mind.",
+      image: "/furniture.png",
+      technologies: [
+        { name: "React", icon: SiReact },
+        { name: "Tailwind CSS", icon: SiTailwindcss },
+        { name: "Node.js", icon: SiNodedotjs },
+        { name: "PostgreSQL", icon: SiPostgresql },
+        { name: "Stripe", icon: SiStripe },
+      ],
+      contributions: [
+        "Developed backend services in Node.js + PostgreSQL for products, users, and orders.",
+        "Built a responsive frontend using React and Tailwind CSS.",
+        "Integrated Stripe for secure payment processing.",
+        "Deployed frontend (Vercel) and backend (Render) for global access.",
+      ],
+      impact:
+        "Delivered a real-world shopping experience with authentication, secure payments, and fast UI — simulating a production-ready e-commerce system.",
+      github: "https://github.com/collins254collo/bobby",
+      live: "https://www.bobbyfurniturekenya.com/",
     },
-];
+    {
+      id: 2,
+      title: "Ride-Hailing Platform",
+      intro:
+        "A real-time Uber-like platform that connects drivers and riders with live location tracking and digital payments.",
+      image: "/furniture.png",
+      technologies: [
+        { name: "React", icon: SiReact },
+        { name: "Tailwind CSS", icon: SiTailwindcss },
+        { name: "Node.js", icon: SiNodedotjs },
+        { name: "PostgreSQL", icon: SiPostgresql },
+        { name: "Mapbox", icon: SiMapbox },
+      ],
+      contributions: [
+        "Designed the driver and rider UI in React with Tailwind.",
+        "Built RESTful APIs for ride requests, fare calculation, and driver matching.",
+        "Integrated Mapbox for real-time tracking and route visualization.",
+        "Added authentication system with role-based login (driver/rider).",
+      ],
+      impact:
+        "Created a scalable foundation for ride-hailing systems with features like real-time maps, role-based access, and payment integration.",
+      github: "https://github.com/Collins254collo/ride-hailing",
+      live: "https://ride-hailing.vercel.app",
+    },
+    {
+      id: 3,
+      title: "AI-Powered Chatbot",
+      intro:
+        "As a co-founder of Colman, I developed an AI-powered chatbot integrated with OpenAI’s API to deliver real-time, automated customer support on our platform.",
+      image: "/colman.png",
+      technologies: [
+        { name: "React", icon: SiReact },
+        { name: "Tailwind CSS", icon: SiTailwindcss },
+        { name: "Node.js", icon: SiNodedotjs },
+        { name: "OpenAI", icon: SiOpenai },
+      ],
+      contributions: [
+        "Integrated OpenAI API for intelligent, context-aware responses.",
+        "Designed and built the chatbot UI with React + Tailwind for seamless interactions.",
+        "Implemented a Node.js backend for session management and API integration.",
+        "Deployed the chatbot on Colman’s platform to support real-time customer engagement.",
+      ],
+      impact:
+        "Improved customer experience by automating inquiries, reducing manual workload, and ensuring 24/7 availability for users.",
+      github: "https://github.com/Collins254collo",
+      live: "https://colman-client.vercel.app/",
+    },
+  ];
+
 
 const Projects = () => {
   return (
@@ -120,14 +121,29 @@ const Projects = () => {
               index % 2 === 1 ? "lg:flex-row-reverse" : ""
             }`}
           >
-            {/* Image */}
-            <div className="lg:w-1/2 w-full overflow-hidden rounded-2xl shadow-lg">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full object-cover"
-              />
-            </div>
+        {/* Image */}
+
+      <div className="lg:w-1/2 w-full overflow-hidden rounded-2xl shadow-lg relative group">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full object-cover transform group-hover:scale-105 transition duration-500"
+        />
+
+        {/* Subtle Overlay */}
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+          <a
+            href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition shadow-lg"
+          >
+            <FaExternalLinkAlt /> Live
+          </a>
+        </div>
+      </div>
+
+
 
             {/* Content */}
             <div className="lg:w-1/2 w-full">

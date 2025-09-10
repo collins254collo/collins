@@ -1,15 +1,13 @@
-import { FaTimes, FaBars, FaCode, FaHome, FaProjectDiagram, FaEnvelope, FaDownload, FaSun, FaMoon } from "react-icons/fa";
+import { FaTimes, FaBars, FaCode, FaHome, FaProjectDiagram, FaEnvelope, FaDownload } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTheme } from "../contexts/ThemeContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const { isDarkMode, toggleTheme } = useTheme();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -136,24 +134,7 @@ const Navbar = () => {
                 );
               })}
               
-              {/* Theme Toggle Button */}
-              <motion.button
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.3 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={toggleTheme}
-                className="ml-2 p-2 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700/50 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-                aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-              >
-                <motion.div
-                  animate={{ rotate: isDarkMode ? 180 : 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                >
-                  {isDarkMode ? <FaSun className="w-5 h-5" /> : <FaMoon className="w-5 h-5" />}
-                </motion.div>
-              </motion.button>
+            
 
               {/* Resume Button */}
               <motion.a
@@ -175,21 +156,7 @@ const Navbar = () => {
 
           {/* Mobile controls */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* Mobile Theme Toggle */}
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleTheme}
-              className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition-colors duration-300"
-              aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-            >
-              <motion.div
-                animate={{ rotate: isDarkMode ? 180 : 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-              >
-                {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
-              </motion.div>
-            </motion.button>
+         
 
             {/* Mobile menu button */}
             <motion.button

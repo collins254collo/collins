@@ -8,7 +8,7 @@ import Testimonials from "./testimonial";
 import Typewriter from "typewriter-effect";
 import { FaGithub, FaLinkedin, FaTwitter, FaCode, FaRocket, FaHeart } from "react-icons/fa";
 import { SiReact, SiJavascript, SiNodedotjs, SiPostgresql } from "react-icons/si";
-import Blogs from "./blog";
+// import Blogs from "./blog";
 
 const Home = () => {
   const navigate = useNavigate(); 
@@ -16,40 +16,26 @@ const Home = () => {
   return (
     <div>
       <section className="min-h-screen flex flex-col-reverse md:flex-row justify-center items-center text-center px-6 bg-gradient-to-br from-gray-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 relative overflow-hidden">
-        {/* Background Decoration */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-indigo-200 dark:bg-indigo-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 dark:bg-purple-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 animate-pulse"></div>
-        </div>
+       
 
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}
-          className="md:w-1/2 max-w-3xl relative z-10"
+          className="md:w-1/2 max-w-3xl relative z-10 "
         >
-          {/* Greeting Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium mb-6 border border-indigo-200 dark:border-indigo-700"
-          >
-            <FaCode className="w-4 h-4" />
-            <span>Available for new opportunities</span>
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-          </motion.div>
+        
 
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-bold mb-4 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-bold mb-4 leading-tight mt-20 "
           >
-            Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
+            Hi 🖐️, I'm{" "}
+            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent ">
               Collins Njogu
             </span>
           </motion.h1>
@@ -61,24 +47,25 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-3xl font-bold mb-8 text-gray-700 dark:text-gray-300"
           >
-            <Typewriter
-              options={{
-                strings: [
-                  "Full Stack Developer",
-                  "React & Next.js Expert",
-                  "AI Integration Specialist",
-                  "Cloud Solutions Architect",
-                  "Open Source Contributor",
-                ],
-                autoStart: true,
-                loop: true,
-                delay: 50,
-                deleteSpeed: 30,
-              }}
-            />
+           <Typewriter
+                options={{
+                  strings: [
+                    "Fullstack Engineer",
+                    "Next.js Fullstack Developer",
+                    "AI Integration Engineer",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  delay: 50,
+                  deleteSpeed: 30,
+                }}
+              />
+
+
+
           </motion.div>
 
-          {/* Enhanced Description */}
+          {/*  Description */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -113,7 +100,7 @@ const Home = () => {
             </div>
           </motion.div>
 
-          {/* Call to Actions */}
+          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -144,7 +131,7 @@ const Home = () => {
 
           </motion.div>
 
-          {/* Enhanced Social Links */}
+          {/*  Social Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -177,7 +164,7 @@ const Home = () => {
                 <FaLinkedin className="w-6 h-6 text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
               </motion.a>
               
-              <motion.a
+              {/* <motion.a
                 whileHover={{ scale: 1.2, y: -3 }}
                 whileTap={{ scale: 0.9 }}
                 href="https://twitter.com/yourtwitter"
@@ -187,7 +174,7 @@ const Home = () => {
                 aria-label="Twitter Profile"
               >
                 <FaTwitter className="w-6 h-6 text-gray-600 dark:text-gray-400 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors" />
-              </motion.a>
+              </motion.a> */}
             </div>
           </motion.div>
         </motion.div>
@@ -200,11 +187,7 @@ const Home = () => {
       className="mt-24 sm:mt-14 md:mt-0 md:w-1/2 flex justify-center relative z-10 px-4"
     >
       <div className="relative w-full max-w-sm md:max-w-md">
-        {/* Decorative Elements - Hidden on mobile for cleaner look */}
-        <div className="hidden md:block absolute -top-4 -right-4 w-8 h-8 bg-indigo-500 rounded-full animate-pulse"></div>
-        <div className="hidden md:block absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
-        <div className="hidden md:block absolute top-1/2 -right-8 w-4 h-4 bg-pink-500 rounded-full animate-pulse delay-500"></div>
-        
+       
         {/* Main Image Container */}
         <div className="relative p-2 bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 dark:from-indigo-800 dark:via-purple-800 dark:to-pink-800 rounded-2xl shadow-2xl">
           <img
@@ -214,12 +197,7 @@ const Home = () => {
           />
           
           {/* Overlay Badge */}
-          <div className="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-2 md:p-3 shadow-lg">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300">Available for work</span>
-            </div>
-          </div>
+          
         </div>
       </div>
     </motion.div>
@@ -227,7 +205,7 @@ const Home = () => {
       </section>
 
       <Skills />
-      <Blogs/>
+      {/* <Blogs/> */}
       <Contact />
       <Testimonials />
     </div>

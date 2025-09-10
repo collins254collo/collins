@@ -25,7 +25,8 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500">
+    <section className="py-20  bg-gradient-to-br from-gray-50 via-white to-indigo-50
+        dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900 transition-colors duration-500">
       <div className="max-w-5xl mx-auto text-center px-6">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
