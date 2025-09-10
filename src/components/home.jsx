@@ -16,7 +16,11 @@ const Home = () => {
   return (
     <div>
       <section className="min-h-screen flex flex-col-reverse md:flex-row justify-center items-center text-center px-6 bg-gradient-to-br from-gray-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 relative overflow-hidden">
-       
+        {/* Background Decoration */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-indigo-200 dark:bg-indigo-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 dark:bg-purple-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 animate-pulse"></div>
+        </div>
 
         {/* Left Content */}
         <motion.div
@@ -32,7 +36,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-bold mb-4 leading-tight mt-18 "
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-bold mb-4 leading-tight mt-20 "
           >
             Hi 👋, I'm{" "}
             <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent ">
@@ -47,19 +51,22 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-3xl font-bold mb-8 text-gray-700 dark:text-gray-300"
           >
-           <Typewriter
-                options={{
-                  strings: [
-                    "Fullstack Engineer",
-                    "Next.js Fullstack Developer",
-                    "AI Integration Engineer",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                  delay: 50,
-                  deleteSpeed: 30,
-                }}
-              />
+    <Typewriter
+  options={{
+    strings: [
+      "Full-Stack Engineer",
+      "React & Next.js Developer", 
+      "AI Integration Specialist",
+      "Cloud Solutions Architect",
+      "Performance Expert"
+    ],
+    autoStart: true,
+    loop: true,
+    delay: 75,
+    deleteSpeed: 50,
+    pauseFor: 2000,
+  }}
+/>
 
 
 
@@ -195,8 +202,6 @@ const Home = () => {
             src={portfolio}
             alt="Collins Njogu - Full Stack Developer"
           />
-          
-          {/* Overlay Badge */}
           
         </div>
       </div>
