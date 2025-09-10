@@ -92,7 +92,7 @@ const Navbar = () => {
           >
             <button
               onClick={() => navigate("/")}
-              className="text-2xl font-bold text-indigo-400 hover:text-indigo-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg px-2 py-1"
+              className="text-2xl font-bold text-indigo-400 hover:text-indigo-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg px-2 py-1 cursor-pointer"
             >
               Collins Njogu
             </button>
@@ -146,7 +146,7 @@ const Navbar = () => {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-colors duration-300 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                className="ml-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-colors duration-300 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 cursor-pointer"
               >
                 <FaDownload className="w-4 h-4" />
                 <span>Resume</span>
@@ -163,7 +163,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition-colors duration-300"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition-colors duration-300 "
               aria-expanded={isOpen}
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >

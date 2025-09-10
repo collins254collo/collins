@@ -32,9 +32,9 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-bold mb-4 leading-tight mt-20 "
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-bold mb-4 leading-tight mt-18 "
           >
-            Hi 🖐️, I'm{" "}
+            Hi 👋, I'm{" "}
             <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent ">
               Collins Njogu
             </span>
