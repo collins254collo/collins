@@ -27,7 +27,6 @@ import {
       contributions: [
         "Developed backend services in Node.js + PostgreSQL for products, users, and orders.",
         "Built a responsive frontend using React and Tailwind CSS.",
-        "Integrated Stripe for secure payment processing.",
         "Deployed frontend (Vercel) and backend (Render) for global access.",
       ],
       impact:
