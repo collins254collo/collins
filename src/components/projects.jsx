@@ -78,7 +78,7 @@ import {
       ],
       impact:
         "Improved customer experience by automating inquiries, reducing manual workload, and ensuring 24/7 availability for users.",
-      github: "https://github.com/Collins254collo",
+      github: "https://github.com/collins254collo/colmantechsavvy",
       live: "https://colman-client.vercel.app/",
     },
   ];

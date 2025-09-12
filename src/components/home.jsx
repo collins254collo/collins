@@ -57,8 +57,7 @@ const Home = () => {
       "Full-Stack Engineer",
       "React & Next.js Developer", 
       "AI Integration Specialist",
-      "Cloud Solutions Architect",
-      "Performance Expert"
+      "Cloud Solutions Architect"
     ],
     autoStart: true,
     loop: true,

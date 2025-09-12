@@ -155,7 +155,7 @@ const FloatingElements = () => {
 
 // Skill tags component
 const SkillTags = () => {
-  const skills = ['React', 'Node.js', 'TypeScript',  'UI/UX', 'postregreSql'];
+  const skills = ['React', 'Node.js', 'TypeScript',  'Express.js', 'postregreSql'];
   
   return (
     <motion.div
@@ -274,7 +274,7 @@ const Contact = () => {
 
       // Success state
       setLoading(false);
-      addNotification('success', 'Message Sent! 🎉', "I'll get back to you within 24 hours");
+      addNotification('success', 'Message Sent! ', "I'll get back to you within 24 hours");
       
       // Reset form
       setFormData({ name: "", email: "", message: "" });
