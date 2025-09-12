@@ -256,6 +256,7 @@ const Contact = () => {
     try {
       // Simulate API call delay for better UX
       await new Promise(resolve => setTimeout(resolve, 1500));
+
       
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/send_email`, {
         method: "POST",
