@@ -632,91 +632,94 @@ const Contact = () => {
                   const isFocused = focusedField === field.name;
                   
                   return (
+                <motion.div
+                  key={field.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                  className="space-y-2"
+                >
+                  <label
+                    htmlFor={field.name}
+                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300"
+                  >
+                    {field.label}
+                    <span className="text-red-500 ml-1">*</span>
+                  </label>
+
+                  <div className="relative group">
+                    {/* Icon */}
                     <motion.div
-                      key={field.name}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1, duration: 0.6 }}
-                      className="space-y-2"
+                      animate={{
+                        scale: isFocused ? 1.1 : 1,
+                        color: hasError ? "#ef4444" : isFocused ? "#6366f1" : "#9ca3af",
+                      }}
+                      className="absolute left-4 top-1/2 transform -translate-y-1/2 text-lg z-10"
                     >
-                      <label
-                        htmlFor={field.name}
-                        className="block text-sm font-semibold text-gray-700 dark:text-gray-300"
-                      >
-                        {field.label} 
-                        <span className="text-red-500 ml-1">*</span>
-                      </label>
-                      
-                      <div className="relative group">
-                        <motion.div
-                          animate={{
-                            scale: isFocused ? 1.1 : 1,
-                            color: hasError ? '#ef4444' : isFocused ? '#6366f1' : '#9ca3af'
-                          }}
-                          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-lg z-10"
-                        >
-                          <Icon />
-                        </motion.div>
-                        
-                        <motion.input
-                          whileFocus={{ scale: 1.01 }}
-                          type={field.type}
-                          id={field.name}
-                          placeholder={field.placeholder}
-                          value={formData[field.name]}
-                          onChange={(e) => handleInputChange(field.name, e.target.value)}
-                          onFocus={() => handleFocus(field.name)}
-                          onBlur={() => handleBlur(field.name)}
-                          className={`w-full pl-14 pr-4 py-4 bg-gray-50 dark:bg-gray-800/50 border-2 rounded-2xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none transition-all duration-300 ${
-                            hasError 
-                              ? 'border-red-500 focus:border-red-500 focus:ring-4 focus:ring-red-500/20' 
-                              : 'border-gray-200 dark:border-gray-700 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20'
-                          }`}
-                          aria-invalid={hasError}
-                          aria-describedby={hasError ? `${field.name}-error` : undefined}
-                        />
-                        
-                        {/* Animated border effect */}
-                        <motion.div
-                          className="absolute inset-0 rounded-2xl pointer-events-none"
-                          animate={{
-                            opacity: isFocused ? 1 : 0,
-                            scale: isFocused ? 1 : 0.95
-                          }}
-                          style={{
-                            background: 'linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899)',
-                            backgroundSize: '300% 300%',
-                            padding: '2px'
-                          }}
-                        >
-                          <motion.div
-                            animate={{
-                              backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                            }}
-                            transition={{
-                              duration: 3,
-                              repeat: Infinity,
-                              ease: "linear"
-                            }}
-                            className="w-full h-full bg-gray-50 dark:bg-gray-800/50 rounded-2xl"
-                          />
-                        </motion.div>
-                      </div>
-                      
-                      <AnimatePresence>
-                        {hasError && (
-                          <motion.div
-                            initial={{ opacity: 0, y: -10, scale: 0.9 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: -10, scale: 0.9 }}
-                            className="flex items-center gap-2 text-red-500 text-sm"
-                          >
-                            <FaExclamationTriangle className="w-4 h-4" />
-                            <span>{errors[field.name]}</span>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                      <Icon />
                     </motion.div>
+
+                    {/* Input (always visible on top) */}
+                    <motion.input
+                      whileFocus={{ scale: 1.01 }}
+                      type={field.type}
+                      id={field.name}
+                      placeholder={field.placeholder}
+                      value={formData[field.name]}
+                      onChange={(e) => handleInputChange(field.name, e.target.value)}
+                      onFocus={() => handleFocus(field.name)}
+                      onBlur={() => handleBlur(field.name)}
+                      className={`relative z-20 w-full pl-14 pr-4 py-4 bg-gray-50 dark:bg-gray-800/50 border-2 rounded-2xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none transition-all duration-300 ${
+                        hasError
+                          ? "border-red-500 focus:border-red-500 focus:ring-4 focus:ring-red-500/20"
+                          : "border-gray-200 dark:border-gray-700 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20"
+                      }`}
+                      aria-invalid={hasError}
+                      aria-describedby={hasError ? `${field.name}-error` : undefined}
+                    />
+
+                    {/* Animated border effect */}
+                    <motion.div
+                      className="absolute inset-0 rounded-2xl pointer-events-none z-0"
+                      animate={{
+                        opacity: isFocused ? 1 : 0,
+                        scale: isFocused ? 1 : 0.95,
+                      }}
+                      style={{
+                        background: "linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899)",
+                        backgroundSize: "300% 300%",
+                        padding: "2px",
+                      }}
+                    >
+                      <motion.div
+                        animate={{
+                          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                        }}
+                        transition={{
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: "linear",
+                        }}
+                        className="w-full h-full bg-gray-50 dark:bg-gray-800/50 rounded-2xl"
+                      />
+                    </motion.div>
+                  </div>
+
+                  <AnimatePresence>
+                    {hasError && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10, scale: 0.9 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -10, scale: 0.9 }}
+                        className="flex items-center gap-2 text-red-500 text-sm"
+                      >
+                        <FaExclamationTriangle className="w-4 h-4" />
+                        <span>{errors[field.name]}</span>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+
                   );
                 })}
 
@@ -739,7 +742,7 @@ const Contact = () => {
                       whileFocus={{ scale: 1.01 }}
                       id="message"
                       rows="6"
-                      placeholder="Tell me about your project: What are you building? What's your timeline? Any specific requirements or technologies you prefer? The more details, the better I can help!"
+                     
                       value={formData.message}
                       onChange={(e) => handleInputChange('message', e.target.value)}
                       onFocus={() => handleFocus('message')}
