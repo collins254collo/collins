@@ -258,7 +258,7 @@ const Contact = () => {
       await new Promise(resolve => setTimeout(resolve, 1500));
 
       
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/send_email`, {
+      const response = await fetch("https://portfolio-t5sr.onrender.com/send_email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
