@@ -257,7 +257,7 @@ const Contact = () => {
       // Simulate API call delay for better UX
       await new Promise(resolve => setTimeout(resolve, 1500));
       
-      const response = await fetch("https://portfolio-t5sr.onrender.com/send_email", {
+      const response = await fetch(process.env.NEXT_PUBLIC_API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
