@@ -34,32 +34,9 @@ import {
       github: "https://github.com/collins254collo/bobby",
       live: "https://www.bobbyfurniturekenya.com/",
     },
+    
     {
       id: 2,
-      title: "Ride-Hailing Platform",
-      intro:
-        "A real-time Uber-like platform that connects drivers and riders with live location tracking and digital payments.",
-      image: "/furniture.png",
-      technologies: [
-        { name: "React", icon: SiReact },
-        { name: "Tailwind CSS", icon: SiTailwindcss },
-        { name: "Node.js", icon: SiNodedotjs },
-        { name: "PostgreSQL", icon: SiPostgresql },
-        { name: "Mapbox", icon: SiMapbox },
-      ],
-      contributions: [
-        "Designed the driver and rider UI in React with Tailwind.",
-        "Built RESTful APIs for ride requests, fare calculation, and driver matching.",
-        "Integrated Mapbox for real-time tracking and route visualization.",
-        "Added authentication system with role-based login (driver/rider).",
-      ],
-      impact:
-        "Created a scalable foundation for ride-hailing systems with features like real-time maps, role-based access, and payment integration.",
-      github: "https://github.com/Collins254collo/ride-hailing",
-      live: "https://ride-hailing.vercel.app",
-    },
-    {
-      id: 3,
       title: "AI-Powered Chatbot",
       intro:
         "As a co-founder of Colman, I developed an AI-powered chatbot integrated with OpenAI’s API to deliver real-time, automated customer support on our platform.",
