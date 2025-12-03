@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Sample case studies
 const caseStudies = [
   {
     title: "Reverse Linked List",
