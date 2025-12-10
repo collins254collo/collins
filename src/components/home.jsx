@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import portfolio from "../assets/port.jpg";
 import Skills from "./skills";
-import Contact from "./contact";
-import Testimonials from "./testimonial";
+// import Contact from "./contact";
+// import Testimonials from "./testimonial";
 import Typewriter from "typewriter-effect";
 import { FaGithub, FaLinkedin, FaTwitter, FaCode, FaRocket, FaHeart } from "react-icons/fa";
 import { SiReact, SiJavascript, SiNodedotjs, SiPostgresql } from "react-icons/si";
-// import Blogs from "./blog";
+import Blogs from "./blog";
 
 const Home = () => {
   const navigate = useNavigate(); 
 
   return (
     <div>
-      <section className="min-h-screen flex flex-col-reverse md:flex-row justify-center items-center text-center px-6 bg-gradient-to-br from-gray-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 relative overflow-hidden">
+      <section className="min-h-screen flex flex-col-reverse md:flex-row justify-center items-center text-center px-6 relative overflow-hidden">
         {/* Background Decoration */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-indigo-200 dark:bg-indigo-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 animate-pulse"></div>
@@ -195,7 +195,7 @@ const Home = () => {
       <div className="relative w-full max-w-sm md:max-w-md">
        
         {/* Main Image Container */}
-        <div className="relative p-2 bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 dark:from-indigo-800 dark:via-purple-800 dark:to-pink-800 rounded-2xl shadow-2xl">
+        <div className="relative p-2 rounded-2xl shadow-2xl">
           <img
             className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded-xl shadow-lg"
             src={portfolio}
@@ -209,9 +209,9 @@ const Home = () => {
       </section>
 
       <Skills />
-      {/* <Blogs/> */}
-      <Contact />
-      <Testimonials />
+      <Blogs/>
+      {/* <Contact /> */}
+      {/* <Testimonials /> */}
     </div>
   );
 };

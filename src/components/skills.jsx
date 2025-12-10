@@ -169,15 +169,14 @@ const Skills = () => {
   return (
         <section
         id="skills"
-        className="py-20 bg-gradient-to-br from-gray-50 via-white to-indigo-50
-        dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900 
+        className="py-20 
         text-gray-900 dark:text-white transition-colors duration-300 relative overflow-hidden"
       >
 
           {/* Background Decoration */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-indigo-200 dark:bg-indigo-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 dark:bg-purple-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 animate-pulse"></div>
+          <div className="absolute-bottom-40 -left-40 w-80 h-80 bg-purple-200 dark:bg-purple-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 animate-pulse"></div>
         </div>
 
       <div className="container mx-auto px-6 relative z-10">

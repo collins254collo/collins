@@ -1,6 +1,9 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaHeart, FaCode, FaRocket } from "react-icons/fa";
 
+
+//bd consulting agency
 const Footer = () => {
+
   const socialLinks = [
     {
       href: "https://github.com/collins254collo",
@@ -118,9 +121,9 @@ const Footer = () => {
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm mb-6">
-            <div className="text-gray-400">
+            {/* <div className="text-gray-400">
               <span>&copy; 2025 Collins Njogu. All rights reserved.</span>
-            </div>
+            </div> */}
             
             <div className="flex items-center gap-2 text-gray-400">
               <span>Made with</span>
